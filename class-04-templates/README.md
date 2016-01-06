@@ -1,17 +1,12 @@
-# Assignment for Class 4 - Templates and SMACSS
+# Class 4 - Templates and SMACSS
 
-Templates have some advantages over direct DOM manipulation. Leverage those strengths in your blogging system!
+Templates have some advantages over direct DOM manipulation. Leverage those strengths in the blog, and in your portfolio application!
 
-## User Stories
- 1. As a developer, I want to declare templates for articles, so that I can build new articles more easily.
- - As a developer, I want to follow SMACSS organization, so that I know where to look for creating and editing styles.
+As we get more sophisticated, this is a good time to ensure our CSS styles are well organized. We'll follow the SMACSS system for keeping everything in it's proper place. 
 
-
-## Technical Requirements and Grading Rubric
- - Add Handlebars to your blogging system.
- - Organize your CSS code according to SMACSS.
- -
-
-## Helpful Resources
- - Handlebars: http://handlebarsjs.com
- - SMACSS: https://smacss.com/
+## Class videos
+- [Part 1 of 5]
+- [Part 2 of 5]
+- [Part 3 of 5]
+- [Part 4 of 5]
+- [Part 5 of 5]

@@ -1,8 +1,8 @@
-# jQuery Events in the View
+# Responsive Web Apps & SMACSS
 
-Work with the provided starter code to add event handling to a basic Blog web site.
+Work with the provided starter code to make the Blog web app mobile-first responsive.
 
-The code has unfinished features. Your help is needed to complete it! The blog should end up looking [something like this](http://hijk.it/image/1C3V1S1r3H1n/Screen%20Shot%202015-11-23%20at%2012.21.45%20PM.png).
+The code has unfinished features. Your help is needed to complete it!
 
 Search through the code for:
 
@@ -18,7 +18,7 @@ Take a moment to shake hands and introduce yourselves.
 
 You and your pair will have different experience levels, which is normal. You'll have opportunities to both teach and learn from your pair. Keep an open mind, and always be kind.
 
-The workflow may take a little getting used to, if you haven't done pairing before, so give yourself time to work through any git issues (aka: "gituations") that arise.
+The workflow may take a little getting used to, so give yourself time to work through any git issues that arise.
 
 ## Setup your repo
 
@@ -36,15 +36,14 @@ Here is a recommended workflow, if you haven't already set up a fork to work fro
 
 ## Write code together
 
-Now duplicate the starter code, find those `TODO` items in the source code, and tackle them.
+Now find those `TODO` items in the code, and tackle one of them.
 
 1. Driver: In your terminal, change directory into the `pair-assignemnt` folder.
-1. Ensure you are under the `class-02` folder.
+1. Ensure you are under the `class-03` folder.
 1. Copy the starter code folder to a new folder named for your pair:
  - `cp starter-code/ natalie-patrick/`
 1. Now cd into that new folder. This is where you will write code.
-1. Type `atom .` to open the new folder (your current directory) as a project in Atom.
-1. Take some time to read through the code. There is lots there, and it's dense. Do some code review together.
+1. Type `atom .` to open the new folder as a project in Atom.
 1. Use the Atom "Find in Project" feature to locate all the TODO items.
 1. Work through one or two TODO items, testing your code as you go, until you are happy with how it's working.
 
