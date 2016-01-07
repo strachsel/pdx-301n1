@@ -109,3 +109,4 @@ Enter the following into your Terminal:
  You should get a long list and at the end you should get a list of packages you installed for Atom. Linter and linter-eslint should be on that list.
 
 Congrats! You're all done.
+# code-blog
