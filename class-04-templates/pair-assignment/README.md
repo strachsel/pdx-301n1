@@ -4,7 +4,14 @@ Fix up the blog codebase, so it's properly using Handlebars templates.
 
 You should be familiar with the pair flow by now. If not, review previous instructions.
 
-## Write code together
+## TODOs: MVP
+1. Include the Handlebars.js file in your project.
+1. Convert your existing template html code into a Handlebars style template.
+1. Update your article `.toHTML` method to use Handlebars
+1. You may find it useful to attach some additional properties to your article object, before you hand it off to the template.
+
+# TODOs: Stretch Goals
+1. Pick some other part of the blog, and set it up to be rendered from a Handlebars template as well.
 
 Find those `TODO` items in the codebase, and tackle each one of them.
 
@@ -22,4 +29,4 @@ Find those `TODO` items in the codebase, and tackle each one of them.
 
 When you are finished with your work (or if time runs out), then submit your work. To do this, you'll create a PR to the upstream repo with your changes, and submit that PR link in Canvas.
 
-See previous instructions, if you'd like to review the steps. 
+See previous instructions, if you'd like to review the steps.
