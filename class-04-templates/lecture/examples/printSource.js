@@ -2,7 +2,7 @@
 // It's just a handy little utility script to view HTML that was created from a template
 // The teachers use it mainly for creating code snippets for slides
 
-// use this script to print HTML that was rendered with jQuery or handlebars.
+// Use this script to print HTML that was rendered with jQuery or handlebars.
 // Because you can't just save it from the browser
 // npm -g install phantomjs
 // and then for example:
