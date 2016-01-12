@@ -13,7 +13,7 @@ You should be familiar with the pair flow by now. If not, review previous instru
 1. Actually, we only need to request the JSON file when we don't already have it, so the conditional check should only do the ajax call when localStorage doesn't have the rawData yet.
 
 # TODOs: Stretch Goals
-1. Coded as above, we won't request a new JSON file if we've already downloaded it. This cacheing is problematic, if the JSON file is updated (therefore our cache is "invalid"). To overcome this, we could use a small and fast AJAX request with a method of "HEAD", to request just the headers, and not the contents of the file. The HEAD response will contain a key called "eTag". This value is calculated based on the contents of the file. So if a new article is added (or an existing one is edited even slightly), the eTag will be different.
+1. Coded as above, we won't request a new JSON file if we've already downloaded it once. This cacheing is problematic: if the JSON file is updated (therefore our cache is "invalid"), a new copy won't be requested from the server unless localStorage is cleared. To overcome this, we could use a small and fast AJAX request with a method of `HEAD`, to request just the headers, and not the contents of the file. The HEAD response will contain a key called "eTag". The value of the eTag header is calculated based on the contents of the file. So if a new article is added (or an existing one is edited even slightly), the eTag will be different.
   - If we cache the eTag, then we can compare our cached version of it with a new eTag check, to determine if we need to get the whole file or not.
   - This can introduce some synchronicity issues, so we'll need to carefully control what methods are calling back to what.
 
