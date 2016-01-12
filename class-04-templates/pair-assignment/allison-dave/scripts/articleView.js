@@ -1,6 +1,23 @@
 // Configure a view object, to hold all our functions for dynamic updates and article-related event handlers.
 var articleView = {};
 
+var source = $('#filterTemplate').html();
+var template = Handlebars.compile(source);
+
+var context = {
+  filters: [
+    {
+      name: "author"
+    },
+    {
+      name: "category"
+    }
+  ]
+}
+
+var compiledHtml = template(context);
+$('#filters').append(compiledHtml);
+
 articleView.populateFilters = function() {
   $('article').each(function() {
     if (!$(this).hasClass('template')) {
