@@ -48,7 +48,7 @@ Article.fetchAll = function() {
     // When rawData is already in localStorage,
     // we can load it with the .loadAll function above,
     // and then render the index page (using the proper method on the articleView object).
-    Article.loadAll(//TODO: What do we pass in?
+    Article.loadAll(//TODO: What do we pass in here to the .loadAll function?
     );
     articleView.someFunctionToCall; //TODO: What method do we call to render the index page?
   } else {
@@ -58,40 +58,5 @@ Article.fetchAll = function() {
     // then load all the data into Article.all with the .loadAll function above,
     // and then render the index page.
 
-
   }
 }
-
-// STRETCH GOAL: Cache the data source file etag header, to see if it's updated!
-// This version follows! Helper function .getAll required.
-// This could be dramatically cleaned up with some well-named functions.
-Article.fetchAll = function() {
-  if (localStorage.rawData) {
-    // Lets get the eTag, and see how it compares with what we have stored.
-    $.ajax({
-      type: 'HEAD',
-      url: '/data/hackerIpsum.json',
-      success: function(data, message, xhr) {
-        console.log(xhr); // Want to see what you are getting back from the server??
-        var eTag = xhr.getResponseHeader('eTag');
-        if (!localStorage.eTag || eTag !== localStorage.eTag) {
-          localStorage.eTag = eTag;
-          Article.getAll();
-        } else {
-          Article.loadAll(JSON.parse(localStorage.rawData));
-          articleView.initIndexPage();
-        }
-      }
-    });
-  } else {
-    Article.getAll();
-  }
-};
-
-Article.getAll = function() {
-  $.getJSON('/data/hackerIpsum.json', function(rawData) {
-    Article.loadAll(rawData);
-    localStorage.rawData = JSON.stringify(rawData); // Cache the json, so we don't need to request it next time.
-    articleView.initIndexPage()
-  });
-};
