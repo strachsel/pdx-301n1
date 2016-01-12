@@ -19,7 +19,7 @@ Article.prototype.toHtml = function() {
   //   The result is added to the object as a new property, which can then be referenced by key in the template.
   //   For example, you might want to display how old a post is, or say "(draft)" if it has no publication date:
   this.daysAgo = parseInt((new Date() - new Date(this.publishedOn)) / 60 / 60 / 24 / 1000);
-  this.publishStatus = this.publishedOn ? 'published ' + this.daysAgo + ' days ago' : '(draft)';
+  this.publishStatus = this.publishedOn ? this.daysAgo + ' days ago' : '(draft)';
 
   var appTemplate = $('#blogTemplate').html();
   var compiledTemplate = Handlebars.compile(appTemplate);
