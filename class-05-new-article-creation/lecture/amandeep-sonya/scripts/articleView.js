@@ -64,14 +64,27 @@ articleView.setTeasers = function() {
 
 articleView.initNewArticlePage = function() {
   // TODO: Ensure the main .tab-content area is revealed. We might add more tabs later.
-
+  $('.tab-content').show();
   // TODO: The new articles we create will be copy/pasted into our source data file.
   // Set up this "export" functionality. We can hide it for now, and show it once we have data to export.
 
-  // TODO: Add an event handler to update the preview and the export field if any inputs change.
-};
+
+
+$('#new-form').on('change', 'input,textarea', articleView.create);
+
+  // DONE: Add an event handler to update the preview and the export field if any inputs change.
+
+
 
 articleView.create = function() {
+  var articleJson = {
+    title:$('#article-title').val(),
+    category:$('#article-category').val(),
+    author:$('#article-author').val(),
+    authorUrl:$('#article-authorUrl').val(),
+    publishedOn:$('#article-published').val(),
+    body:$('#article-body').val(),
+  }
   // TODO: Set up a var to hold the new article we are creating.
   // Clear out the #articles element, so we can put in the updated preview
 
@@ -83,6 +96,7 @@ articleView.create = function() {
 
   // TODO: Export the new article as JSON, so it's ready to copy/paste into blogArticles.js:
 };
+JSON.stringify({articleJson});
 
 
 articleView.initIndexPage = function() {
