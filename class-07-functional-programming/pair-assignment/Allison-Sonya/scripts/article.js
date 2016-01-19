@@ -55,16 +55,16 @@
     }
   };
 
-
-
   // TODO: Chain together a `map` and a `reduce` call to get a rough count of all words in all articles.
   Article.numWordsAll = function() {
     return Article.all.map(function(article) {
+      return article.match(/\s+/g);
   //    return // Get the total number of words in this article
     })
     .reduce(function(a, b) {
+      return a + b;
   //    return // Sum up all the values in the collection
-    });
+    }, 0);
   };
 
   // TODO: Chain together a `map` and a `reduce` call to produce an array of unique author names.
