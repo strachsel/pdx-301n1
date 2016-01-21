@@ -103,7 +103,7 @@
 
   articleView.initIndexPage = function() {
     Article.all.forEach(function(a){
-      $('#articles').append(a.toHtml())
+      $('#articles').append(a.toHtml());
     });
 
     articleView.populateFilters();
@@ -114,19 +114,22 @@
   };
 
   articleView.initAdminPage = function() {
-    // TODO: Call the Handlebars `.compile` function, which will return a function for you to use where needed.
-    var template // = ...?
+    // DONE: Call the Handlebars `.compile` function, which will return a function for you to use where needed.
+    var source = $('#author-template').html();
+    var template = Handlebars.compile(source);
 
     // DONE: We use `forEach` here because we are relying on the side-effects of the callback function:
     // appending to the DOM.
     // The callback is not required to return anything.
-    Article.numWordsByAuthor().forEach(function(stat) {
-      $('.author-stats').append(template(stat));
-    })
+
+    // Article.numWordsByAuthor().forEach(function(stat) {
+    //   $('.author-stats').append(template(stat));
+    // });
 
     // DONE: Simply write the correct values to the page:
     $('#blog-stats .articles').text(Article.all.length);
     $('#blog-stats .words').text(Article.numWordsAll());
+    console.log(Article.allAuthors());
   };
 
   module.articleView = articleView;

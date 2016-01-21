@@ -10,8 +10,9 @@
     <link rel="stylesheet" href="/styles/layout.css">
     <link rel="stylesheet" href="/styles/modules.css">
     </head>
-    <!-- TODO: Setup a template for each row of the Author Stats section of this page: -->
+    <!-- DONE: Setup a template for each row of the Author Stats section of this page: -->
     <script id="author-template" type="text/x-handlebars-template">
+
       <li><strong>{{name}}</strong>: {{numWords}} words written</li>
     </script>
   <body>
@@ -39,7 +40,7 @@
         <h2>Author Stats</h2>
         <p><em>Details on who is writing, and how much writing they are doing...</em></p>
         <ul class="author-stats">
-          <!-- TODO: Use a handlebars template to fill in some stats for each author -->
+          <!-- DONE: Use a handlebars template to fill in some stats for each author -->
         </ul>
       </section>
     </main>
@@ -54,7 +55,7 @@
     <script>
       // TODO: After we fetch and load all the articles, what view function do we want to run next?
       // Let's pass in a callback function, to determine what happens AFTER all articles are loaded.
-        Article.fetchAll(articleView.initIndexPage); // Add an argument to the function call.
+        Article.fetchAll(articleView.initAdminPage); // Add an argument to the function call.
     </script>
   </body>
 </html>
