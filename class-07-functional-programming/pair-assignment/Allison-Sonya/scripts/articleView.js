@@ -122,9 +122,9 @@
     // appending to the DOM.
     // The callback is not required to return anything.
 
-    // Article.numWordsByAuthor().forEach(function(stat) {
-    //   $('.author-stats').append(template(stat));
-    // });
+    Article.numWordsByAuthor().forEach(function(stat) {
+      $('.author-stats').append(template(stat));
+    });
 
     // DONE: Simply write the correct values to the page:
     $('#blog-stats .articles').text(Article.all.length);

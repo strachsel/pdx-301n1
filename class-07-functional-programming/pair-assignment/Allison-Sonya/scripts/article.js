@@ -89,7 +89,15 @@
     return Article.allAuthors().map(function(author) {
       return {
         // someKey: someValOrFunctionCall().map(...).reduce(...), ...
+        name: author,
+        numWords: Article.all.filter(function(article){
+          return article.author === author;
+        })
+        .reduce(function(p, n){
+          return p + n.body.split(' ').length;
+        }, 0)
       };
+
     });
   };
 
