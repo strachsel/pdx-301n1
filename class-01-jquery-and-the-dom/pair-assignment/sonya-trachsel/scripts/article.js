@@ -20,9 +20,9 @@ Article.prototype.toHtml = function() {
   // from this particular Article instance. We need to fill in:
   // the author name and url, the article title and body, and the
   // publication date.
-$newArticle.find('h1').html(this.title)
-$newArticle.find('address').html(this.author)
-$newArticle.find('article-body').html(this.body)
+  $newArticle.find('h1').html(this.title)
+  $newArticle.find('address').html(this.author)
+  $newArticle.find('article-body').html(this.body)
   // Include the publication date as a 'title' attribute to show on hover:
   $newArticle.find('time[pubdate]').attr('title', this.publishedOn)
 
@@ -31,8 +31,8 @@ $newArticle.find('article-body').html(this.body)
 
   $newArticle.append('<hr>');
 
-  // TODO: This cloned article is no longer a template, so we should remove that class...
-  $newArticle.removeClass("Template");
+  // DONE: This cloned article is no longer a template, so we should remove that class...
+  $newArticle.removeClass("template");
   return $newArticle;
 };
 
@@ -43,7 +43,7 @@ rawData.sort(function(a,b) {
 rawData.forEach(function(ele) {
   articles.push(new Article(ele));
 })
-
+debugger;
 articles.forEach(function(a){
   $('#articles').append(a.toHtml())
 });
