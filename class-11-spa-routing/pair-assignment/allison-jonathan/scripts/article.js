@@ -145,7 +145,7 @@
   Article.stats = function() {
     return {
       numArticles: Article.all.length,
-      numWords: Article.numwords(),
+      //numWords: Article.numwords(),
       Authors: Article.allAuthors(),
     };
   };

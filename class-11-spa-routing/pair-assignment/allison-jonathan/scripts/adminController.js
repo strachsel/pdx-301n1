@@ -6,10 +6,11 @@
   // code that used to be in index.html.
   // Also be sure to hide all the main section elements, and reveal the #articles section:
   adminController.index = function() {
-    articleView.initAdminPage;
+    articleView.initAdminPage();
 
-    $('#articles').show();
-    $('#about').hide();
+    $('#blog-stats, #admin-list').show();
+    $('#articles').hide();
+    $('#about, #index-list').hide();
   };
 
   module.adminController = adminController;
