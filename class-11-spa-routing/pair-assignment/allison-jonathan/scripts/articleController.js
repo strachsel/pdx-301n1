@@ -11,8 +11,10 @@
   articlesController.index = function() {
     Article.fetchAll(articleView.initIndexPage);
 
-    $('#articles').show();
+    $('#articles, #index-list').show();
     $('#about').hide();
+    $('#blog-stats, #admin-list').hide();
+
   };
 
   module.articlesController = articlesController;
