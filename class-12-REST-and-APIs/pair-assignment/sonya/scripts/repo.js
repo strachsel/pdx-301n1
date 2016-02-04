@@ -10,7 +10,8 @@
       type: 'GET',
       headers: {'Authorization': 'token ' + githubToken },
       success: function(data) {
-      callback();
+        repos.all = data;
+        callback();
       }
     })
   };

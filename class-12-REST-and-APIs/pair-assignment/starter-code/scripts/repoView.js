@@ -11,7 +11,8 @@
 
   // TODO: How do you want to render a single repo as html? Return your filled in HTML template.
   var render = function(repo) {
-
+    alert('Sonya is awesome');
+// take the repository data and populate in HTML string. need anchor tag - href the link to the repo, name the name of the repo
   };
 
   // DONE: If all the data is loaded, we can prep the UI and render the repos.
