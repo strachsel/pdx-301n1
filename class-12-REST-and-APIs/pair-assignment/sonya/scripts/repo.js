@@ -6,14 +6,13 @@
   repos.requestRepos = function(callback) {
     // DONE: How would you like to fetch your repos? Don't forget to call the callback.
     $.ajax({
-      url: 'https://api.github.com/users/strachsel/repos/',
+      url: 'https://api.github.com/users/strachsel/repos',
       type: 'GET',
       headers: {'Authorization': 'token ' + githubToken },
       success: function(data) {
         repos.all = data;
-        callback();
       }
-    })
+    }).done(callback);
   };
 
   // DONE: Model method that filters the full collection for repos with a particular attribute.
