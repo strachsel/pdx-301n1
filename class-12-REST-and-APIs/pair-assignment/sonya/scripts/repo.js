@@ -1,14 +1,13 @@
 (function(module) {
   var repos = {};
 
-    repos.all = [];
+  repos.all = [];
 
   repos.requestRepos = function(callback) {
 
-    repos.all = [];
     // DONE: How would you like to fetch your repos? Don't forget to call the callback.
     $.ajax({
-      url: 'https://api.github.com/users/strachsel/repos',
+      url: 'https://api.github.com/users/brookr/repos',
       type: 'GET',
       headers: {'Authorization': 'token ' + githubToken },
       success: function(data) {
